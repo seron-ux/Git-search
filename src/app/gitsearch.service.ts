@@ -50,30 +50,30 @@ export class GitsearchService {
     return promise;
   }
 
-  // searchrepo(term:string){
+  searchrepo(term:string){
     
-  //   interface ApiRes {
-  //     name:any,
-  //      description:any,
-  //      created_at:any,
-  //      html_url:any,
-  //   }
-  //   let searchP = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
+    interface ApiRes {
+      name:any,
+       description:any,
+       created_at:any,
+       html_url:any,
+    }
+    let searchP = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
 
-  //   let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
 
-  //     this.http.get<ApiRes>(searchP).toPromise().then(
-  //       (data) => {
-  //         this.repo = data;
-  //         resolve(data);
-  //       },
-  //       (error) => {
+      this.http.get<ApiRes>(searchP).toPromise().then(
+        (data) => {
+          this.repo = data;
+          resolve(data);
+        },
+        (error) => {
           
-  //         reject();
-  //       }
-  //     );
-  //   });
-  //   return promise;
-  // }
+          reject();
+        }
+      );
+    });
+    return promise;
+  }
 
 }
