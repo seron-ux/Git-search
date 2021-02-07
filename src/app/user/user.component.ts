@@ -10,40 +10,40 @@ import { Repository } from '../repository';
 })
 export class UserComponent implements OnInit {
 
-  // user:User;
-  // repo:Repository
+  user:User;
+  repo:Repository
   
-  // constructor( public service:GitsearchService) {
-  //   this.user = new User('','','','',0,0);
-  //   this.repo = new Repository('','','','');
-  //  }
+  constructor( public service:GitsearchService) {
+    this.user = new User('','','','',0,0);
+    this.repo = new Repository('','','','');
+   }
 
-  // searchUser(term:any){
-  //   this.service.searchUsers(term).then(
-  //     (success)=>{
-  //       this.user=this.service.user;
+  searchUser(term:any){
+    this.service.searchUsers(term).then(
+      (success)=>{
+        this.user=this.service.user;
         
-  //     },
-  //     (error)=>{
-  //       console.log(error)
-  //     }
-  //   )
-  //   this.service.searchrepo(term).then(
-  //     (success)=>{
-  //       this.repo=this.service.repo;
-  //       console.log(this.repo);   
-  //     },
-  //     (error)=>{
-  //       console.log(error)
-  //     }
-  //   )
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
+    this.service.searchrepo(term).then(
+      (success)=>{
+        this.repo=this.service.repo;
+        console.log(this.repo);   
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
 
-  // }
+  }
 
 
-  // ngOnInit(): void {
-  //   this.searchUser("seron-ux");
-  // }
+  ngOnInit(): void {
+    this.searchUser("seron-ux");
+  }
 
 
 }
