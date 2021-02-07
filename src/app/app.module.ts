@@ -9,10 +9,10 @@ import { UserComponent } from './user/user.component';
     AppComponent,
     UserComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+  // imports: [
+  //   BrowserModule,
+  //   HttpClientModule
+  // ],
   providers: [],
   bootstrap: [AppComponent]
 })
