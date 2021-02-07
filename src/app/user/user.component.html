@@ -1,0 +1,59 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <input name="title" #term>
+            <button (click)="searchUser(term)">Search</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h3 *ngIf="user.login">Username: <span class="text-warning">{{user.login}}</span></h3>
+                </div>
+                <div class="card-footer">
+                    <h4 *ngIf="user.name">Name: {{user.name}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body" *ngIf="user.avatar_url">
+                    <img class="card-img-top" src="{{user.avatar_url}}" alt="Card image cap">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <button class="btn btn-warning">Followers: {{user.followers}}</button>
+                </div>
+                <div class="card-title">
+                    <button class="btn btn-success">Following: {{user.following}}</button>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" target="_blank" href="{{user.html_url}}">Github Account</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4 mt-3 text-center" *ngFor="let repo of repo">
+            <div class="card">
+                <div class="card-header">
+                    Name: {{repo.name}}
+                </div>
+                <div class="card-body">
+                    {{repo.description}}
+                </div>
+                <div class="card-title">
+                    Created At: {{repo.created_at|date}}
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" target="_blank" href="{{repo.html_url}}">View Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
