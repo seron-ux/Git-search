@@ -14,41 +14,41 @@ import { User } from './user'
 })
 export class GitsearchService {
 
-  // user:User;
-  // repo:Repository;
+  user:User;
+  repo:Repository;
 
-  // constructor(public http:HttpClient) { 
-  //   this.user = new User('','','','',0,0);
-  //   this.repo = new Repository('','','','');
-  // }
+  constructor(public http:HttpClient) { 
+    this.user = new User('','','','',0,0);
+    this.repo = new Repository('','','','');
+  }
   
-  // searchUsers(term:string){
+  searchUsers(term:string){
     
-  //   interface ApiRes {
-  //     login:any,
-  //      avatar_url:any,
-  //      html_url:any,
-  //      name:any,
-  //      followers:any,
-  //      following:any,
-  //   }
-  //   let searchP = 'https://api.github.com/users/' + term + '?access_token=' + environment.apiKey;
+    interface ApiRes {
+      login:any,
+       avatar_url:any,
+       html_url:any,
+       name:any,
+       followers:any,
+       following:any,
+    }
+    let searchP = 'https://api.github.com/users/' + term + '?access_token=' + environment.apiKey;
 
-  //   let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
 
-  //     this.http.get<ApiRes>(searchP).toPromise().then(
-  //       (data) => {
-  //         this.user = data;
-  //         resolve(data);
-  //       },
-  //       (error) => {
+      this.http.get<ApiRes>(searchP).toPromise().then(
+        (data) => {
+          this.user = data;
+          resolve(data);
+        },
+        (error) => {
           
-  //         reject();
-  //       }
-  //     );
-  //   });
-  //   return promise;
-  // }
+          reject();
+        }
+      );
+    });
+    return promise;
+  }
 
   // searchrepo(term:string){
     
