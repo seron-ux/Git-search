@@ -60,7 +60,7 @@ export class GitsearchService {
        created_at:any,
        html_url:any,
     }
-    let headers = new HttpHeaders ({'Authorization':'token 5800a15060c7c80189b999dcca739381f37e1ecd'}) 
+    let headers = new HttpHeaders ({'Authorization':'token 94e08c6e69bd9b36a6824c43c0ab38a69a3bf8f8'}) 
     let option={headers:headers}
     let searchP = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
 
