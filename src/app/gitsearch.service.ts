@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {environment} from '../environments/environment';
+import {HttpClient,HttpHeaders} from '@angular/common/http';
+import {environment,} from '../environments/environment';
 
 import { Repository } from './repository';
 import { promise } from 'protractor';
@@ -32,6 +32,8 @@ export class GitsearchService {
        followers:any,
        following:any,
     }
+    let headers = new HttpHeaders ({'Authorization':'token'}) 
+    let option={headers:headers}
     let searchP = 'https://api.github.com/users/' + term + '?access_token=' + environment.apiKey;
 
     let promise = new Promise((resolve, reject) => {
@@ -58,6 +60,8 @@ export class GitsearchService {
        created_at:any,
        html_url:any,
     }
+    let headers = new HttpHeaders ({'Authorization':'token 5800a15060c7c80189b999dcca739381f37e1ecd'}) 
+    let option={headers:headers}
     let searchP = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
 
     let promise = new Promise((resolve, reject) => {
